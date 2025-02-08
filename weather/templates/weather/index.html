@@ -1,0 +1,14 @@
+{% extends 'projeto/home.html' %}
+{% block title %} Index do Site {% endblock%}
+{% block body %}
+Este é o index do weather.
+Clique <a href="{%url 'index' %}">Clique aqui para voltar</a>
+
+<ul>
+    {% for cidade in cidades %}
+    <li>{{ cidade.nome }} - {{cidade.estado}}</li>
+    {% endfor %}
+</ul>
+
+
+{% endblock%}
