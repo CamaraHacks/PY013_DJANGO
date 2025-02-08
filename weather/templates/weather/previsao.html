@@ -1,0 +1,14 @@
+{% extends 'projeto/home.html' %}
+
+{% block title %} Previsão para {{cidade}} {% endblock%}
+{% block body %}
+
+A previsão para a lat: {{cidade.lat}} e long: {{cidade.long}} é:
+<br>
+
+Dia: {{previsao.0}}
+Máxima: {{previsao.1}}
+Mínima: {{previsao.2}}
+
+
+{% endblock%}

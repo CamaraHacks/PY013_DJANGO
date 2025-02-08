@@ -2,11 +2,13 @@
 {% block title %} Index do Site {% endblock%}
 {% block body %}
 Este é o index do weather.
-Clique <a href="{%url 'index' %}">Clique aqui para voltar</a>
+Clique <a href="{%url 'index' %}">aqui </a> para voltar
 
 <ul>
     {% for cidade in cidades %}
-    <li>{{ cidade.nome }} - {{cidade.estado}}</li>
+    <li>{{ cidade.nome }} - {{cidade.estado}}
+        <a href="{% url 'previsao' cidade.pk %}">Previsão</a>
+    </li>
     {% endfor %}
 </ul>
 
